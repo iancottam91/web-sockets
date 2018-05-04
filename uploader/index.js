@@ -6,6 +6,7 @@ var fs = require('fs');
 var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/uploads';
 
 var app = new express();
+app.use(express.static('assets'));
 
 // *** DB WORK *** //
 

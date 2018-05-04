@@ -1,0 +1,13 @@
+@font-face {
+    font-family: Rieth-Sans;
+    src: url(fonts/WOFF/BBCReithSerif_W_Rg.woff);
+}
+
+html {
+    font-family: Rieth-Sans;
+    padding: 10px;
+}
+
+body {
+    background: #eee;
+}
