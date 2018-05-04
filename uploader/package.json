@@ -10,5 +10,8 @@
   },
   "scripts": {
     "start": "node index.js"
+  },
+  "dependencies": {
+    "@bbc/igm-btn": "^1.4.0"
   }
 }

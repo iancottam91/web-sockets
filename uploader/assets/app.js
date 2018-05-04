@@ -32,9 +32,9 @@ class Greetings extends React.Component{
                     value: this.state.description
                 }),
             ),
-            React.createElement('a', {
+            React.createElement('button', {
                 onClick: this.submitData,
-                href: "#0"
+                className: 'igm-btn'
             }, 'Submit'),
         )
     }

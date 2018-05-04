@@ -3,6 +3,9 @@
     src: url(fonts/WOFF/BBCReithSerif_W_Rg.woff);
 }
 
+.igm-btn{font-size:15px;font-size:.9375rem;line-height:18px;line-height:1.125rem;padding:6px;margin-right:10px;box-sizing:border-box;background-color:#8C8C8C;color:#fff;border:0;display:inline-block;cursor:pointer;font-weight:300}@media (min-width: 37.5em){.igm-btn{line-height:20px;line-height:1.25rem}.no-touch .igm-btn{font-size:14px;font-size:.875rem;line-height:18px;line-height:1.125rem}}.igm-btn:hover:not([disabled]){background-color:#666}.igm-btn:last-child{margin-right:0}.igm-btn:not(.igm-btn--link){min-width:80px}.igm-btn:not(.igm-btn--plainLink){min-width:80px}.igm-btn[disabled]{opacity:0.6;cursor:default}.igm-btn--primary{background-color:#4c87c8;color:#fff}.igm-btn--primary:hover:not([disabled]){background-color:#2F6199}.igm-btn--secondary{background-color:#4e4e4e;color:#fff}.igm-btn--secondary:hover:not([disabled]){background-color:#282828}.igm-btn--danger{background-color:#e25151;color:#fff}.igm-btn--danger:hover:not([disabled]){background-color:#c62121}.igm-btn--publish{background-color:#5db85d;color:#fff}.igm-btn--publish:hover:not([disabled]){background-color:#3d8b3d}.igm-btn--link{background-color:transparent;color:#3f81cc}.igm-btn--link:hover:not([disabled]){text-decoration:underline;background-color:transparent}.igm-btn--plainLink{background-color:transparent;color:#404042}.igm-btn--plainLink:hover:not([disabled]){text-decoration:underline;background-color:transparent}
+
+
 html {
     font-family: Rieth-Sans;
     padding: 10px;

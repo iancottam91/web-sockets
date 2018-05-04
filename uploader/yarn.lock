@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@bbc/igm-btn@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.npmjs.org/@bbc/igm-btn/-/igm-btn-1.4.0.tgz#cad60d6b0e22e61976016179ff1fabdbac98e45f"
+
 accepts@~1.3.5:
   version "1.3.5"
   resolved "https://registry.npmjs.org/accepts/-/accepts-1.3.5.tgz#eb777df6011723a3b14e8a72c0805c8e86746bd2"
