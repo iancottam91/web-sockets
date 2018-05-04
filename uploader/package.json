@@ -1,0 +1,14 @@
+{
+  "name": "uploader",
+  "version": "1.0.0",
+  "description": "Upload stuff to a database",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.16.3",
+    "pg": "6"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

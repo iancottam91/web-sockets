@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Uploader</title>
+</head>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<body>
+    <h1>Uploader</h1>
+    Click <a id="upload" href="#0">Here</a> to upload some stuff
+</body>
+<script>
+    $(function () {
+        $('#upload').on('click', function(){
+            console.log('post data to db');
+            $.post("/api/upload", { text: "Test", complete: true }, function (data) {
+                console.log(data);
+            });
+        });
+    });
+</script>
+</html>
