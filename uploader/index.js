@@ -43,8 +43,7 @@ app.post('/api/upload', (req, res, next) => {
 
 
 // STATIC ASSETS
-app.use('/dist', express.static(path.resolve(__dirname, 'assets', 'dist')));
-app.use('/img', express.static(path.resolve(__dirname, 'assets', 'img')));
+app.use('/dist', express.static(path.resolve(__dirname, 'dist')));
 
 // CLIENT UI - ROUTE THE REST OF THE URLS TO INDEX.HTML
 app.get('*', function(req, res) {

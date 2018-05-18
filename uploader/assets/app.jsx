@@ -1,3 +1,7 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Input from '@bbc/igm-input';
+
 class Greetings extends React.Component{
 
     constructor() {
@@ -23,24 +27,17 @@ class Greetings extends React.Component{
 
     render()
     {
-        return React.createElement('div', null,
-            React.createElement('p', null, 'Enter your image description below!'),
-            React.createElement('div', null,
-                React.createElement('input', {
-                    type: "text",
-                    onChange: this.handleChange,
-                    value: this.state.description
-                }),
-            ),
-            React.createElement('button', {
-                onClick: this.submitData,
-                className: 'igm-btn'
-            }, 'Submit'),
-        )
+        return (<div>
+            <p>Enter your image description below!</p>
+            <div>
+                <Input type="text" onChange={this.handleChange} value={this.state.description} />
+                <button onClick={this.submitData} className="igm-btn">Submit</button>
+            </div>
+        </div>);
     }
 }
 
 ReactDOM.render(
-    React.createElement(Greetings, { name : 'Chris' }),
+    <Greetings name="Chris" />,
     document.getElementById('root')
 );

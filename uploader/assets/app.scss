@@ -1,0 +1,28 @@
+@import "~@bbc/igm-btn/btn.css";
+@import "~@bbc/igm-input/input.css";
+
+html {
+    font-family: Rieth-Sans;
+    padding: 10px;
+}
+
+body {
+    background: #eee;
+}
+
+.igm-input {
+    width: calc(100% - 84px);
+    float: left;
+    margin-right: 4px;
+}
+.igm-input__content {
+    height: 30px;
+    input {
+        text-indent: 5px;
+    }
+}
+
+.gel-icon svg {
+    height: 14px;
+    margin-top: 2px;
+}
