@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Input from '@bbc/igm-input';
+import request from 'superagent';
 
 class Greetings extends React.Component{
 
@@ -16,13 +17,19 @@ class Greetings extends React.Component{
     submitData(e) {
         e.preventDefault();
         console.log('submitData');
-        $.post("/api/upload", { text: this.state.description, complete: true }, function (data) {
-            console.log(data);
-        });
+        // send data
+        console.log({ text: this.state.description, complete: true });
+        request
+            .post('/api/upload')
+            .send({ text: this.state.description, complete: true })
+            .set('Accept', 'application/json')
+            .then(function(res) {
+                console.log(res.body);
+            });
     }
 
-    handleChange(e) {
-        this.setState({description: e.target.value});
+    handleChange(value) {
+        this.setState({description: value});
     }
 
     render()

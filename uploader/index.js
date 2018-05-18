@@ -3,18 +3,23 @@ var router = express.Router();
 var pg = require('pg');
 var path = require('path');
 var fs = require('fs');
+var bodyParser = require('body-parser');
 var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/uploads';
 
 var app = new express();
+app.use(bodyParser.json());
 app.use(express.static('assets'));
 
 // *** DB WORK *** //
 
 // CREATE
 app.post('/api/upload', (req, res, next) => {
+
+  console.log(req.body);
+
   const results = [];
   // Grab data from http request
-  const data = {text: 'Test', complete: false};
+  const data = {text: req.body.text, complete: false};
   // Get a Postgres client from the connection pool
   pg.connect(connectionString, (err, client, done) => {
     // Handle connection errors

@@ -6,21 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Uploader</title>
     <link rel="stylesheet" href="font.css">
-    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 </head>
 <body>
     <h1>Uploader</h1>
     <div id="root"></div>
 </body>
-<script>
-    $(function () {
-        $('#upload').on('click', function(){
-            console.log('post data to db');
-            $.post("/api/upload", { text: "Test", complete: true }, function (data) {
-                console.log(data);
-            });
-        });
-    });
-</script>
 <script src="dist/bundle.js"></script>
 </html>
