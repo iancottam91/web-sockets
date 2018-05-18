@@ -24,7 +24,7 @@ pg.connect(connectionString, (err, client, done) => {
     console.log(msg);
     io.emit('db update', msg);
   });
-  var query = client.query("LISTEN watch_asset_upload");
+  var query = client.query("LISTEN watch_item_upload");
 });
 
 
@@ -40,7 +40,7 @@ app.get('/api/uploads', (req, res, next) => {
       return res.status(500).json({success: false, data: err});
     }
     // SQL Query > Select Data
-    const query = client.query('SELECT * FROM assets ORDER BY id ASC;');
+    const query = client.query('SELECT * FROM items ORDER BY id ASC;');
     // Stream results back one row at a time
     query.on('row', (row) => {
       results.push(row);

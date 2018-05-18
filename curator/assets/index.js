@@ -1,7 +1,7 @@
 const renderUploads = (uploads) => {
     console.log(uploads);
     uploads.map((upload) => {
-        $('#messages').append(`<li>ID: ${upload.id}</li>`);
+        $('#messages').append(`<li>${upload.name}</li>`);
     });
 }
 
@@ -17,7 +17,8 @@ $(function () {
     });
     socket.on('db update', function(msg){
         console.log(msg);
-        $('#messages').append($('<li>').text(msg.payload));
+        var desc = msg.payload.split(',')[4];
+        $('#messages').append($('<li>').text(desc));
     });
 });
 

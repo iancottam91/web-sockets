@@ -29,10 +29,10 @@ app.post('/api/upload', (req, res, next) => {
       return res.status(500).json({success: false, data: err});
     }
     // SQL Query > Insert Data
-    client.query('INSERT INTO assets(name) values($1)',
+    client.query('INSERT INTO items(name) values($1)',
     [data.text]);
     // SQL Query > Select Data
-    const query = client.query('SELECT * FROM assets ORDER BY id ASC');
+    const query = client.query('SELECT * FROM items ORDER BY id ASC');
     // Stream results back one row at a time
     query.on('row', (row) => {
       results.push(row);

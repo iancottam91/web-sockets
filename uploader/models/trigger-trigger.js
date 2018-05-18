@@ -5,5 +5,5 @@ const client = new pg.Client(connectionString);
 client.connect();
 
 const query = client.query(
-    "INSERT INTO ASSETS(NAME) VALUES ('a');");
+    "INSERT INTO ITEMS(NAME) VALUES ('a');");
 query.on('end', () => { client.end(); });

@@ -6,18 +6,18 @@ client.connect();
 
 // create the table
 let query = client.query(
-  "CREATE TABLE assets (id serial primary key, name varchar);");
+  "CREATE TABLE items (id serial primary key, name varchar);");
 // // create the table
 query = client.query(
-    "CREATE FUNCTION asset_upload_trigger() RETURNS trigger AS $$\
+    "CREATE FUNCTION item_upload_trigger() RETURNS trigger AS $$\
     DECLARE\
     BEGIN\
-      PERFORM pg_notify('watch_asset_upload', TG_TABLE_NAME || ',id,' || NEW.id );\
+      PERFORM pg_notify('watch_item_upload', TG_TABLE_NAME || ',id,' || NEW.id || ',name,' || NEW.name  );\
       RETURN new;\
     END;\
     $$ LANGUAGE plpgsql;");
 // // create the trigger
 query = client.query(
-    "CREATE TRIGGER watch_asset_trigger AFTER INSERT ON assets\
-    FOR EACH ROW EXECUTE PROCEDURE asset_upload_trigger();");
+    "CREATE TRIGGER watch_item_trigger AFTER INSERT ON items\
+    FOR EACH ROW EXECUTE PROCEDURE item_upload_trigger();");
 query.on('end', () => { client.end(); });
